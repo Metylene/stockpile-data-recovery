@@ -24,6 +24,7 @@ function loadScreenshot() {
 }
 
 function loadItemsImages() {
+    let rootPathname = window.location.pathname;
     let xhr = new XMLHttpRequest();
     xhr.open("GET", window.location.pathname + "items", true);
     xhr.responseType = 'document';
@@ -33,7 +34,7 @@ function loadItemsImages() {
             for (x of elements) {
                 if (x.href.match(/\.(jpe?g|png|gif)$/)) {
                     let img = document.createElement("img");
-                    img.src = x.href.replace(x.pathname, window.location.pathname + x.pathname);
+                    img.src = x.href.replace(x.pathname, rootPathname.slice(0, -1) + x.pathname);
                     document.getElementById('itemsIcon').appendChild(img);
                 }
             };
