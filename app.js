@@ -39,7 +39,7 @@ function loadItemsImages() {
             };
         }
         else {
-            alert('Request failed. Returned status of ' + xhr.status);
+            console('Request failed. Returned status of ' + xhr.status);
         }
     }
     xhr.send();
@@ -58,7 +58,7 @@ function loadItemsImages() {
             };
         }
         else {
-            alert('Request failed. Returned status of ' + xhr2.status);
+            console('Request failed. Returned status of ' + xhr2.status);
         }
     }
     xhr2.send();
