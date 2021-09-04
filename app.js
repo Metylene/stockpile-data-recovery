@@ -34,7 +34,7 @@ function loadItemsImages() {
             for (x of elements) {
                 if (x.href.match(/\.(jpe?g|png|gif)$/)) {
                     let img = document.createElement("img");
-                    img.src = x.href.replace(x.pathname, rootPathname.slice(0, -1) + x.pathname);
+                    img.src = rootPathname.slice(0, -1) + x.pathname;
                     document.getElementById('itemsIcon').appendChild(img);
                 }
             };
@@ -53,8 +53,7 @@ function loadItemsImages() {
             for (x of elements) {
                 if (x.href.match(/\.(jpe?g|png|gif)$/)) {
                     let img = document.createElement("img");
-                    img.src = x.href.replace(x.pathname, rootPathname.slice(0, -1) + x.pathname);
-                    console.log(x.pathname, rootPathname);
+                    img.src = rootPathname.slice(0, -1) + x.pathname;
                     document.getElementById('itemsNumber').appendChild(img);
                 }
             };
