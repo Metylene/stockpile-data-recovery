@@ -25,6 +25,7 @@ function loadScreenshot() {
 
 function loadItemsImages() {
     let rootPathname = window.location.pathname;
+    console.log(rootPathname);
     let xhr = new XMLHttpRequest();
     xhr.open("GET", window.location.pathname + "items", true);
     xhr.responseType = 'document';
