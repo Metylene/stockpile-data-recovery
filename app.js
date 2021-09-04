@@ -25,7 +25,6 @@ function loadScreenshot() {
 
 function loadItemsImages() {
     let rootPathname = window.location.pathname;
-    console.log(rootPathname);
     let xhr = new XMLHttpRequest();
     xhr.open("GET", window.location.pathname + "items", true);
     xhr.responseType = 'document';
@@ -55,6 +54,7 @@ function loadItemsImages() {
                 if (x.href.match(/\.(jpe?g|png|gif)$/)) {
                     let img = document.createElement("img");
                     img.src = x.href.replace(x.pathname, rootPathname.slice(0, -1) + x.pathname);
+                    console.log(x.pathname, rootPathname);
                     document.getElementById('itemsNumber').appendChild(img);
                 }
             };
