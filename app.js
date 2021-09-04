@@ -33,7 +33,7 @@ function loadItemsImages() {
             for (x of elements) {
                 if (x.href.match(/\.(jpe?g|png|gif)$/)) {
                     let img = document.createElement("img");
-                    img.src = x.href;
+                    img.src = x.href.replace(x.pathname, window.location.pathname + x.pathname);
                     document.getElementById('itemsIcon').appendChild(img);
                 }
             };
