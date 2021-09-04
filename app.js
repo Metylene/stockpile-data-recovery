@@ -9,18 +9,18 @@ base_image.onload = function () {
     canvasW = canvasElt.width = base_image.width;
     canvasH = canvasElt.height = base_image.height;
     context.drawImage(base_image, 0, 0);
-    loadScreenshot();
+    loadItemsImages();
 }
-base_image.src = 'screenshots/2.png';
+base_image.src = 'screenshots/4.png';
+document.getElementById('screenshot').src = base_image.src;
 
-document.getElementById('clipStockpile').onclick = loadScreenshot;
+document.getElementById('clipStockpile').onclick = start;
 document.getElementById('clipStockpilesContent').onclick = clipStockpilesContent;
 
-function loadScreenshot() {
+function start() {
     const imgData = context.getImageData(0, 0, canvasW, canvasH);
     const data = imgData.data;
     clipStockpile(data);
-    loadItemsImages();
 }
 
 function loadItemsImages() {
