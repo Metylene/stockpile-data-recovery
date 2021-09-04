@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitement screenshot</title>
+    <style>
+        body { background-color: gainsboro;}
+    </style>
+</head>
+<body>
+    <div id="itemsIcon"></div>
+    <div id="itemsNumber"></div>
+    <canvas id="canvas" width='1920' height="1080"></canvas>
+    <br>
+    <button id="clipStockpile">Clip stockpile</button>
+    <div id="stockpiles"></div>
+    <br>
+    <button id="clipStockpilesContent">Clip content</button>
+    <button id="saveIcons" onclick="saveIcons()" disabled>Save item icons</button>
+    <button id="saveIcons" onclick="recognizeItems()">Recognize items</button>
+    <div id="stockpilesContent"></div>
+</body>
+<script src='dist/pixelmatch.js'></script>
+<script src="dist/FileSaver.min.js"></script>
+<script src="dist/jszip.min.js"></script>
+<script src="app.js"></script>
+</html>
