@@ -54,7 +54,7 @@ function loadItemsImages() {
             for (x of elements) {
                 if (x.href.match(/\.(jpe?g|png|gif)$/)) {
                     let img = document.createElement("img");
-                    img.src = x.href;
+                    img.src = x.href.replace(x.pathname, rootPathname.slice(0, -1) + x.pathname);
                     document.getElementById('itemsNumber').appendChild(img);
                 }
             };
