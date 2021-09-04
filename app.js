@@ -1,3 +1,4 @@
+console.log(window.location);
 let canvasElt = document.getElementById('canvas');
 let context = canvasElt.getContext('2d');
 let canvasW, canvasH;
@@ -25,7 +26,7 @@ function loadScreenshot() {
 
 function loadItemsImages() {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "/items", true);
+    xhr.open("GET", "/stockpile-data-recovery/items", true);
     xhr.responseType = 'document';
     xhr.onload = () => {
         if (xhr.status === 200) {
@@ -44,7 +45,7 @@ function loadItemsImages() {
     }
     xhr.send();
     let xhr2 = new XMLHttpRequest();
-    xhr2.open("GET", "/numbers", true);
+    xhr2.open("GET", "/stockpile-data-recovery/numbers", true);
     xhr2.responseType = 'document';
     xhr2.onload = () => {
         if (xhr2.status === 200) {
