@@ -39,7 +39,7 @@ function loadItemsImages() {
             };
         }
         else {
-            console('Request failed. Returned status of ' + xhr.status);
+            console.log('Request failed. Returned status of ' + xhr.status);
         }
     }
     xhr.send();
@@ -58,7 +58,7 @@ function loadItemsImages() {
             };
         }
         else {
-            console('Request failed. Returned status of ' + xhr2.status);
+            console.log('Request failed. Returned status of ' + xhr2.status);
         }
     }
     xhr2.send();
